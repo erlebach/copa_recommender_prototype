@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "recommender-poetry"
+version = "0.1.0"
+description = ""
+authors = ["erlebach <gordon.erlebach@gmail.com>"]
+readme = "README.md"
+packages = [{include = "recommender_poetry"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.23.1"
+pandas = "^1.4.3"
+matplotlib = "^3.5.2"
+fastcore = "^1.5.14"
+plotly = "^5.9.0"
+Cython = "^0.29.32"
+rankfm = {git = "https://github.com/etlundquist/rankfm"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
