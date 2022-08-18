@@ -1,0 +1,58 @@
+2022-08-18
+
+Installation: 
+-------------
+1) Install poetry. Follow instructions from the web. 
+I include the file pyproject.toml that contains the modules and their 
+environment required by this project. 
+
+2) Make sure that the file pyproject.lock is removed. 
+
+3) Execute: 
+
+> poetry install
+
+which downloads files required by the project consistent with the contents of the 
+file "pyproject.toml".  An error might appear on the screen suggesting a problem with 
+the "wheel" file related to the 'rankfm'  framework. At least on my Mac, this does not 
+prevent the code run running properly.
+
+3) Before running your program, execute: 
+
+>  poetry shell
+
+4) Check the version of python you are using: 
+
+> which python 
+
+The output should point to a file inside a Poetry Cache. On my macbook Pro, I get the output
+
+>  /Users/erlebach/Library/Caches/pypoetry/virtualenvs/recommender-poetry-2AuP2PUK-py3.8/bin/python
+
+5) Check the file "copa_config.py", which defines a dictionary of configuration parameters. Currently, 
+	  this dictionary only contains "use_wandb", set to False. 
+
+============================================================================================
+Input files: 
+------------
+MEMBER_ID, Destinations with attributes
+- attrib_yr_mo_2017_07.csv     (year: 2017, month: July)
+- attrib_yr_mo_2017_08.csv     (year: 2017, month: August)
+
+PYTHON CODE EXECUTION
+To run the code (on Linux Ubuntu and Macbook Pro with M1 processor): 
+
+> python rankfm_copa_single_run.py
+
+Code Output: hit rate of validation set (with and without filtering of the training destinations)
+
+===========================================================================================
+At this time, I cannot enter a single member ID. Instead, I must enter a file with columns MEMBER_ID, D, 
+along with user and item attributes. A better input mechanism will be provided shortly. This version 
+of the code is meant to demonstrate installation and feasibility. 
+
+===========================================================================================
+Additional Resource
+-------------------
+Information on Poetry: https://hackersandslackers.com/python-poetry-package-manager/
+===========================================================================================
