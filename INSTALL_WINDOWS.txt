@@ -34,3 +34,11 @@ Steps:
 HOWEVER, I got an error with rankfm, which is downloaded from GitHub and must be compiled. To do so, apparently, I need Visual C++ 14.0. So get it, remove the poetry.lock file (which is 49,000 lines long on the Windows platform, but only 526 lines long on my mac). 
 
 Play around (have your IT people play around), and let me know what happens. I would be happy to log on to your computer and do all this for you, but if not, you are on your own. I believe I got you almost all the way there. I might try to install Visual C++ 14.0 (if I do not have to pay) and see what happens.
+
+Installation of Microsoft Visual Studio 14.0
+ https://visualstudio.microsoft.com/downloads/
+ https://visualstudio.microsoft.com/visual-cpp-build-tools/
+    Download Build Tools, and then reboot. 
+	It does not appears one can simply download tools to build C++ without download Visual Studio in totality. 
+	Stick with default options. Space required: 5 GB. 
+
