@@ -1,0 +1,36 @@
+2022-08-24
+----------
+I read somewhere that removing "WindowApps" folder from the Path should fix the problem. Do not know how to do this yet. 
+
+I can now use poetry. 
+
+Steps: 
+
+1) Uninstall Python from your system. 
+2) Also remove Python.exe from wherever it is located, in my case in WindowsApps/
+3) Install Python (not from the Windows app store, but from python.org). Use the Windows recommended installer (there is only a single recommended installer)
+4) The python executable is called "Py". I believe it is located in "C:\program files\"
+5) Create an alias so you can type "Python" instead of "Py": 
+    In the command shell, type 
+        new-alias  + Enter
+    To the prompt: Name, type "python" (without the quotes)
+    To the prompt: Value, type "py" (without the quotes)
+
+6) Install git on your system, and make sure it can execute from the powershelgl. If it doesn't, you'll have problems with poetry commands.  
+    You might have to add to the path. You do that as discussed this morning. But for git to then be recognized by the powershell, you must close and reopen the Powershell. There might be another method to do this, but I do not know it. 
+
+7) Install Poetry as we did this morning. 
+
+8) go into the poetry directory, git rid of any lock file, and type: 
+    poetry install
+
+9) Once that is done without errors, type: 
+   poetry shell
+
+10) type:   poetry env info      (just provides you with information)
+
+11) You should be done. 
+
+HOWEVER, I got an error with rankfm, which is downloaded from GitHub and must be compiled. To do so, apparently, I need Visual C++ 14.0. So get it, remove the poetry.lock file (which is 49,000 lines long on the Windows platform, but only 526 lines long on my mac). 
+
+Play around (have your IT people play around), and let me know what happens. I would be happy to log on to your computer and do all this for you, but if not, you are on your own. I believe I got you almost all the way there. I might try to install Visual C++ 14.0 (if I do not have to pay) and see what happens.
