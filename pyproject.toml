@@ -15,6 +15,7 @@ fastcore = "^1.5.14"
 plotly = "^5.9.0"
 Cython = "^0.29.32"
 rankfm = {git = "https://github.com/etlundquist/rankfm"}
+attrdict = "^2.0.1"
 
 [build-system]
 requires = ["poetry-core"]
