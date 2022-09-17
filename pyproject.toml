@@ -16,6 +16,7 @@ plotly = "^5.9.0"
 Cython = "^0.29.32"
 rankfm = {git = "https://github.com/etlundquist/rankfm"}
 attrdict = "^2.0.1"
+seaborn = "^0.12.0"
 
 [build-system]
 requires = ["poetry-core"]
